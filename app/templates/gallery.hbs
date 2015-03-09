@@ -1,0 +1,11 @@
+<p>I am Gallery with id: {{id}} called: {{title}}</p>
+
+{{#each picture in pictures}}
+  {{#link-to 'picture' model picture}}
+    <img {{bind-attr src=picture.tn}}>
+  {{/link-to}}
+{{/each}}
+
+{{outlet}}
+
+<h1>{{link-to 'Back' 'galleries'}}</h1>
