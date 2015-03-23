@@ -8,9 +8,11 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('galleries', { path: '/' }, function() {
   });
+  
   this.resource('gallery', { path: '/:gallery_id' }, function() {
     this.resource('picture', { path: '/:picture_id' });
   });
+
 });
 
 export default Router;
